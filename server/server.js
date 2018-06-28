@@ -25,9 +25,9 @@ app.post('/upload', upload.single('avatar'), function (req, res) {
   if (req.file) {
     console.log('file', req.file)
     console.log('body', req.body)
-    res.json({msg: '成功...'})
+    return res.json({msg: '成功...'})
   }
-  res.json({msg: '失败...'})
+  return res.json({msg: '失败...'})
 })
 
 app.get('/hello', function (req, res) {
